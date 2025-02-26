@@ -1,7 +1,7 @@
 /* 使用 Bootstrap 样式的基础上进行简化 */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; /* 单一背景颜色 */
+    background-color: #ffffff; /* 白色背景 */
     color: #343a40;
 }
 
@@ -48,22 +48,26 @@ input[type="range"] {
     background: #e0e0e0; /* 滑块背景 */
     height: 8px; /* 滑块高度 */
     border-radius: 5px; /* 圆角 */
-    border: 1px solid #007bff; /* 添加边框 */
+    outline: none; /* 去掉聚焦时的轮廓 */
 }
 
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* 去掉默认样式 */
     appearance: none;
-    width: 20px; /* 滑块的宽度 */
-    height: 20px; /* 滑块的高度 */
+    width: 24px; /* 滑块的宽度 */
+    height: 24px; /* 滑块的高度 */
     background: #007bff; /* 滑块颜色 */
     border-radius: 50%; /* 圆形滑块 */
     cursor: pointer; /* 鼠标悬停时的样式 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 滑块阴影 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 滑块阴影 */
+    transition: background 0.3s ease; /* 添加过渡效果 */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #0056b3; /* 悬停时的滑块颜色 */
 }
 
 input[type="range"]:focus {
-    outline: none; /* 去掉聚焦时的轮廓 */
     border-color: #1a1a1a;
 }
 
