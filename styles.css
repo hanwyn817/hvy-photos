@@ -1,0 +1,97 @@
+/* 使用 Bootstrap 样式的基础上进行简化 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* 单一背景颜色 */
+    color: #343a40;
+}
+
+header {
+    background-color: #343a40;
+    padding: 20px 0; /* 增加顶部和底部的内边距 */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0; /* 去掉默认的外边距 */
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* 增加卡片内部的间距 */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card.selected {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #0056b3;
+}
+
+.card .card-title {
+    color: inherit;
+    margin-bottom: 10px; /* 增加标题与内容之间的间距 */
+}
+
+input[type="range"] {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    -webkit-appearance: none; /* 去掉默认样式 */
+    background: #e0e0e0; /* 滑块背景 */
+    height: 8px; /* 滑块高度 */
+    border-radius: 5px; /* 圆角 */
+    border: 1px solid #007bff; /* 添加边框 */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* 去掉默认样式 */
+    appearance: none;
+    width: 20px; /* 滑块的宽度 */
+    height: 20px; /* 滑块的高度 */
+    background: #007bff; /* 滑块颜色 */
+    border-radius: 50%; /* 圆形滑块 */
+    cursor: pointer; /* 鼠标悬停时的样式 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 滑块阴影 */
+}
+
+input[type="range"]:focus {
+    outline: none; /* 去掉聚焦时的轮廓 */
+    border-color: #1a1a1a;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.nav-link {
+    transition: color 0.3s ease, background-color 0.3s ease; /* 添加背景颜色过渡效果 */
+    padding: 10px 15px; /* 增加内边距 */
+    border-radius: 5px; /* 圆角 */
+}
+
+.nav-link:hover {
+    color: #fff; /* 悬停时字体颜色 */
+    background-color: #007bff; /* 悬停时背景颜色 */
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .form-range {
+        max-width: 100%;
+    }
+}
